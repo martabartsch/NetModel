@@ -9,6 +9,34 @@ vector<vector<int>> Graph::createEmptyMatrix(int size) {
     return vector<vector<int>>(size, vector<int>(size, 0));
 }
 
+vector<vector<pair<int, int>>> Graph::createAdjList(string& input) {
+    int size = sqrt(input.size()); //3
+    vector<vector<pair<int, int>>> adjList(size);
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            if (input[i * size + j] == '1') {
+                adjList[i].push_back({j, 1});
+            } else {
+                adjList[i].push_back({j, 0});
+            }
+        }
+    }
+    return adjList;
+}
+
+vector<vector<int>> Graph::createAdjacencyMatrix(string &input) {
+    int size = sqrt(input.size());
+    vector<vector<int>> matrix(size, vector<int>(size, 0));
+    int idx = 0;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            matrix[i][j] = input[idx++] - '0';
+        }
+    }
+    return matrix;
+}
+
 void Graph::addBothSidesEdge(vector<vector<int>>& adjacencyList, int u, int v) {
     adjacencyList[u].push_back(v);
     adjacencyList[v].push_back(u);

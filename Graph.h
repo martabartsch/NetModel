@@ -15,6 +15,8 @@ class Graph {
     public:
     static vector<vector<int>> createEmptyAdjacencyList(int size);
     static vector<vector<int>> createEmptyMatrix(int size);
+    static vector<vector<pair<int, int>>>createAdjList(string& input);
+    static vector<vector<int>> createAdjacencyMatrix(string& input);
     static void addBothSidesEdge(vector<vector<int>>& adjacencyList, int u, int v);
     static void addBothSidesEdgeToMatrix(vector<vector<int>>& graph, int x, int y);
     static void updateEdgeWeight(vector<vector<int>>& matrix, int a, int b, int value);

@@ -4,15 +4,15 @@ project(NetModel)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(NetModel main.cpp
-        DCN.cpp
-        DCN.h
-        Graph.cpp
-        Graph.h
-        BRV.cpp
-        BRV.h
-        LuSuGuo.cpp
-        LuSuGuo.h
-        IterativeGrowth.cpp
-        IterativeGrowth.h
-        Kronecker.cpp
-        Kronecker.h)
+        Models/DCN.cpp
+        Models/DCN.h
+        Models/Graph.cpp
+        Models/Graph.h
+        Models/BRV.cpp
+        Models/BRV.h
+        Models/LuSuGuo.cpp
+        Models/LuSuGuo.h
+        Models/IterativeGrowth.cpp
+        Models/IterativeGrowth.h
+        Models/Kronecker.cpp
+        Models/Kronecker.h)
